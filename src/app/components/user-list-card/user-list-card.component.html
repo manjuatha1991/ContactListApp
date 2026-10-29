@@ -1,0 +1,21 @@
+<h1 class="h1 text-danger" *ngIf="errorMessage">{{errorMessage}}</h1>
+<table class="table table-hover table-striped text-center" *ngIf="contacts.length>0 && !errorMessage">
+  <thead class="bg-secondary text-white">
+    <tr>
+      <td>SNO</td>
+      <td>NAME</td>
+      <td>EMAIL</td>
+      <td>PHONE</td>
+      <td>LOCATION</td>
+    </tr>
+  </thead>
+  <tbody>
+   <tr *ngFor="let contact of contacts" (click)="emitcontact(contact)" >
+      <td>{{contact.login.uuid}}</td>
+      <td>{{contact.name.first}}</td>
+      <td>{{contact.email}}</td>
+      <td>{{contact.phone}}</td>
+      <td>{{contact.location.city}}</td>
+   </tr>
+  </tbody>
+</table>

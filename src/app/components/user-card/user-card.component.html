@@ -1,0 +1,22 @@
+<div class="card" *ngIf="isNotEmpty()">
+    <img [src]="contact.picture.large" alt="">
+  <div class="card-body"> 
+   <ul class="list-group">
+      <li class="list-group-item">
+        NAME : {{contact.name.first}}{{contact.name.last}}
+      </li>
+      <li class="list-group-item">
+        EMAIL : {{contact.email}}
+      </li>
+      <li class="list-group-item">
+        AGE : {{contact.dob.age}}
+      </li>
+      <li class="list-group-item">
+        CITY : {{contact.location.city}}
+      </li>
+      <li class="list-group-item">
+        STATE : {{contact.location.state}}
+      </li>
+   </ul>
+  </div>
+</div>

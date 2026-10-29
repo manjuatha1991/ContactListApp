@@ -1,0 +1,18 @@
+<div class="container">
+ <div class="row">
+    <div class="col-md">
+      <h1>User List App </h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A explicabo totam incidunt qui ut magni dolorum maxime repudiandae autem quae necessitatibus, doloribus distinctio quisquam blanditiis consequatur excepturi quo ullam at!</p>
+    </div>
+ </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+    <app-user-list-card (sendContact)="selectedContact=$event"></app-user-list-card>
+    </div>
+    <div class="col-3">
+     <app-user-card [contact]="selectedContact"></app-user-card>
+    </div>
+  </div>
+</div>
